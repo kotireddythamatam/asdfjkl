@@ -1,0 +1,257 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<style media="screen">
+  .profile{
+    width : 30%;
+    float : left;
+    margin :0% 10%;
+    padding : 1% 1%;
+    /* background-color :lightblue; */
+  }
+  .user_details{
+    width :30%
+    float : right;
+    background: red;
+    padding :10%;
+  }
+
+  #myBar {
+    width: 10%;
+    height: 30px;
+    background-color: #4CAF50;
+    text-align: center; /* To center it horizontally (if you want) */
+    line-height: 30px; /* To center it vertically */
+    color: white;
+  }
+
+
+/* radial percentage progress bar */
+flex-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.single-chart {
+  width: 33%;
+  justify-content: space-around ;
+}
+
+.circular-chart {
+  display: block;
+  margin: 10px auto;
+  max-width: 80%;
+  max-height: 250px;
+}
+
+.circle-bg {
+  fill: none;
+  stroke: #eee;
+  stroke-width: 3.8;
+}
+
+.circle {
+  fill: none;
+  stroke-width: 2.8;
+  stroke-linecap: round;
+  animation: progress 1s ease-out forwards;
+}
+
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+
+.circular-chart.green .circle {
+  stroke: #4CC790;
+}
+
+.percentage {
+  fill: #666;
+  font-family: sans-serif;
+  font-size: 0.5em;
+  text-anchor: middle;
+}
+
+
+
+
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 3px 3px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  /* bottom: 23px; */
+  /* right: 28px; */
+  width: 20%;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  /* bottom: 0; */
+  /* right: 15px; */
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  /* margin-bottom:10px; */
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+</style>
+<form action="" method="post">
+  {{form}}
+  <input type="submit" value="save">
+</form>
+
+
+<!-- <div class="profile">
+
+
+  <img width="100px" height="100px" style="border-radius:50px" src="{% static '/icon.png' %}" alt="image">
+
+  <form action="" enctype="multipart/form-data" method="post">
+    {% csrf_token %}
+    <label for="">Choose your photo</label>
+    <input type="file" name="photo">
+    <input type="submit" value="save">
+  </form>
+
+<button class="open-button" onclick="openForm()">Click here to add Educational details</button>
+<div class="form-popup" id="myForm">
+<form class="" action="" class="form-container" method="post">
+  {% csrf_token %}<br><br>
+  <label for="">Enter Your course Name</label>
+  <input type="text" name="coursename" placeholder="Cours Name"><br>
+  <label for="">College Name</label>
+  <input type="text" name="collegename" placeholder="College Name"><br>
+  <label for="">Percentage</label>
+  <input type="text" name="percentage" placeholder="Percentage"><br>
+  <label for="">Passedout Year</label>
+  <input type="text" name="passedoutyear" placeholder="passoutyear"><br>
+  <input type="submit" onclick="closeform()" value="save">
+</form>
+</div> -->
+
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+
+<div class="user_details">
+<label for="">First Name</label>{{ form.first_name }}<br>
+<label for="">Last Name</label>{{ form.last_name }}<br>
+<label for="">Email Id</label>{{ form.email_id }}<br>
+<label for="">Phone Number</label>{{ form.phone_number }}<br>
+<label for="">Password</label>{{ form.password }}<br>
+<label for="">Conform_password</label>{{ form.conform_password }}<br>
+<label for="">Gender</label>{{ form.gender }}<br>
+<label for="">Age</label>{{ form.age }}<br>
+<label for="">Data_of_birth</label>{{ form.data_of_birth }}<br>
+<label for="">Qualification</label>{{ form.qualificationl }}<br>
+<label for="">Status</label>{{ form.status }}<br>
+<label for="">Created_date</label>{{ form.created_date }}
+</div>
+
+<div class="flex-wrapper">
+  <div class="single-chart">
+    <svg viewBox="0 0 36 36" class="circular-chart orange">
+      <path class="circle-bg"
+        d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"/>
+      <path class="circle"
+        stroke-dasharray="30, 100"
+        d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"/>
+      <text x="18" y="20.35" class="percentage">30%</text>
+    </svg>
+  </div>
+</div>
+
+
+<div id="myProgress">
+  <div id="myBar">10%</div>
+</div>
+<br>
+<button onclick="move()">Click Me</button> 
+
+
+<script type="text/javascript">
+  var i = 0;
+function move() {
+  if (i == 0) {
+    i = 1;
+    var elem = document.getElementById("myBar");
+    var width = 10;
+    var id = setInterval(frame, 10);
+    function frame() {
+      if (width >= 100) {
+        clearInterval(id);
+        i = 0;
+      } else {
+        width++;
+        elem.style.width = width + "%";
+        elem.innerHTML = width + "%";
+      }
+    }
+  }
+}
+</script>
+
+{% endblock %}

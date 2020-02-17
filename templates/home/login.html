@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %} Login {% endblock %}
+{% block content %}
+<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+<div class="login_form">
+  <h2>Login Page</h2><br>
+<form action="" method="post">
+  {% csrf_token %}
+  <input type="email" name="email" size="30%" placeholder="Enter Your Email Id"><br><br>
+  <input type="password" name="password" placeholder="Enter Your Password" size="30%"><br><br>
+  <input type="submit" value="Login"><br><br>
+  <a href="/localhost/to_mail">Forgot password?</a>
+</form>
+</div>
+{% endblock %}

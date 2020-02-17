@@ -1,0 +1,122 @@
+.w{
+  margin: 1% 20%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.second
+{
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 150px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+.second > li
+{
+    position: relative;
+    height: 30px;
+    background: #999999;
+}
+.second > li:hover {
+   background: #CCCCCC;
+ }
+.top
+{
+    list-style: none;
+    padding: 0 5px;
+    margin: 0;
+    width: 100%;
+    float: right;
+}
+
+.top > li
+{
+    position: relative;
+    float: left;
+    height: 30px;
+    width: 100px;
+    background: #2a49ad;
+}
+.top > li:hover { background: #CCCCCC; }
+
+.top li:hover > ul
+{
+    display: inline;
+}
+.top a
+{
+    font: bold 14px Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 0 0 0 10px;
+    display: block;
+    line-height: 30px;
+    font-size: 17px;
+
+}
+.top a:hover { color: #000000; }
+}
+
+.signup_form{
+  margin: 1% 2% 1% 2%;
+  width: 40%;
+  float: right;
+  border: green 1px solid;
+  border-radius: 10px;
+  padding: 2%;
+  background: lightblue;
+}
+
+.login_form{
+  width: 30%;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: #e6eaed;
+  float: right;
+  margin: 3%;
+  padding: 2%;
+}
+
+input[type=submit]{
+  background: green;
+  color: white;
+  border-radius: 10px;
+
+}
+input[type=text],[type=password],[type=email],[type=number]{
+  border: black 1px solid;
+  border-radius: 10px;
+}
+
+.python_navbar{
+  margin: 0 20%;
+}
+
+h2{
+  text-align: center;
+}
+
+.iq{
+  background: blue;
+  margin: 1% 20%;
+}
+
+.profile{
+  margin: 1% 20%;
+}

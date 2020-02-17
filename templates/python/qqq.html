@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style media="screen">
+  .iq{
+    background: #d7ddde;
+    margin: 1% 10%;
+  }
+</style>
+<h2>Python Quiz</h2>
+
+<form action="" method="post">
+  {% csrf_token %}
+  <div class="iq">
+    {{ data.id }}. {{ data.quiz_question }}<br>
+    <input type="radio" name="{{ data.id }}" value="{{ data.option_a }}">{{ data.option_a }}<br>
+    <input type="radio" name="{{ data.id }}" value="{{ data.option_b }}">{{ data.option_b }}<br>
+    <input type="radio" name="{{ data.id }}" value="{{ data.option_c }}">{{ data.option_c }}<br>
+    <input type="radio" name="{{ data.id }}" value="{{ data.option_d }}">{{ data.option_d }}<br>
+  </div>
+  <input type="submit" value="Save">
+</form>
+
+{% endblock %}

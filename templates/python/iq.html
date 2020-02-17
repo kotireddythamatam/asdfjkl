@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>Python Interview Questions and Answeres</h2>
+  {% for data in iq %}
+  <div class="iq">
+    <p><b>{{ data.id }}. {{ data.interview_question }}</b></p>
+    <p>{{ data.answer }}</p><br>
+  </div>
+  {% endfor %}
+{% endblock %}

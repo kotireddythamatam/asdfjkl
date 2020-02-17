@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}{% endblock %}</title>
+    <!-- <link rel="stylesheet" href="{% static 'bootstrap.css' %}"> -->
+    <!-- <link rel="stylesheet" href="{% static 'navbar.css' %}"> -->
+    <link rel="icon" href="{% static 'icon.png' %}">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="{% static 'jquery_content.js' %}"></script>
+  <style media="screen">
+  </style>
+
+  </head>
+  <body>
+    <ul class="top">
+    <li><a href="/localhost/home">Home</a></li>
+    <li><a href="/localhost/python">Python</a>
+        <ul class="second">
+          <li><a href="">Introduction</a></li>
+            <li><a href="#">Basic Python</a></li>
+            <li><a href="#">Advanced Python</a></li>
+            <li><a href="#">Programs</a></li>
+            <li><a href="/localhost/iq">I.Questions</a></li>
+            <li><a href="/localhost/quiz">Quiz</a></li>
+        </ul>
+    </li>
+    <li><a href="/localhost/django">Django</a>
+      <ul class="second">
+        <li><a href="">Introduction</a></li>
+          <li><a href="#">Basic Python</a></li>
+          <li><a href="#">Advanced Python</a></li>
+          <li><a href="#">Programs</a></li>
+          <li><a href="#">Quiz</a></li>
+      </ul>
+    </li>
+    <li><a href="/localhost/restapi">RestApi</a>
+      <ul class="second">
+        <li><a href="">Introduction</a></li>
+          <li><a href="#">Basic Python</a></li>
+          <li><a href="#">Advanced Python</a></li>
+          <li><a href="#">Programs</a></li>
+          <li><a href="#">Quiz</a></li>
+      </ul>
+    </li>
+    <li><a href="/localhost/html">HTML</a>
+      <ul class="second">
+        <li><a href="">Introduction</a></li>
+          <li><a href="#">Basic Python</a></li>
+          <li><a href="#">Advanced Python</a></li>
+          <li><a href="#">Programs</a></li>
+          <li><a href="#">Quiz</a></li>
+      </ul>
+    </li>
+    <li><a href="/localhost/css">CSS</a>
+      <ul class="second">
+        <li><a href="">Introduction</a></li>
+          <li><a href="#">Basic Python</a></li>
+          <li><a href="#">Advanced Python</a></li>
+          <li><a href="#">Programs</a></li>
+          <li><a href="#">Quiz</a></li>
+      </ul>
+    </li>
+    <li><a href="/localhost/js">JS</a>
+      <ul class="second">
+        <li><a href="">Introduction</a></li>
+          <li><a href="#">Basic Python</a></li>
+          <li><a href="#">Advanced Python</a></li>
+          <li><a href="#">Programs</a></li>
+          <li><a href="#">Quiz</a></li>
+      </ul>
+    </li>
+    <li><a href="/localhost/bootstrap">Bootstrap</a>
+      <ul class="second">
+        <li><a href="">Introduction</a></li>
+          <li><a href="#">Basic Python</a></li>
+          <li><a href="#">Advanced Python</a></li>
+          <li><a href="#">Programs</a></li>
+          <li><a href="#">Quiz</a></li>
+      </ul>
+    </li>
+    <li><a class="" href="/localhost/mysql">Mysql</a>
+      <ul class="second">
+        <li><a href="">Introduction</a></li>
+          <li><a href="#">Basic Python</a></li>
+          <li><a href="#">Advanced Python</a></li>
+          <li><a href="#">Programs</a></li>
+          <li><a href="#">Quiz</a></li>
+      </ul>
+    </li>
+    <li><a href="/localhost/mongodb">Mongodb</a>
+      <ul class="second">
+        <li><a href="">Introduction</a></li>
+          <li><a href="#">Basic Python</a></li>
+          <li><a href="#">Advanced Python</a></li>
+          <li><a href="#">Programs</a></li>
+          <li><a href="#">Quiz</a></li>
+      </ul>
+    </li>
+    <li><a href="/localhost/login">Login</a></li>
+    <li><img width="60px" height="28px" src="{% static 'icon.png' %}">
+      <ul class="second">
+        <li><a href="/project/profile">profile</a></li>
+        <li><a href="/project/logout" >Log out</a></li>
+      </ul>
+    </li>
+    <li>dummy</li>
+</ul>
+
+
+
+
+
+<!-- 
+
+<script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var myDropdown = document.getElementById("myDropdown");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+</script> -->
+{% block content %}
+
+{% endblock %}
+</body>
+</html>

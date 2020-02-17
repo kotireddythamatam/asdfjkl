@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+.second
+{
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 150px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+.second > li
+{
+    position: relative;
+    height: 30px;
+    background: #999999;
+}
+.second > li:hover {
+   background: #CCCCCC;
+ }
+.top
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.top > li
+{
+    position: relative;
+    float: left;
+    height: 30px;
+    width: 150px;
+    background: #999999;
+}
+.top > li:hover { background: #CCCCCC; }
+
+.top li:hover > ul
+{
+    display: inline;
+}
+.top a
+{
+    font: bold 14px Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 0 0 0 10px;
+    display: block;
+    line-height: 30px;
+}
+.top a:hover { color: #000000; }
+}
+    </style>
+  </head>
+  <body>
+    <div class="all">
+    <ul class="top">
+    <li><a href="./display">Python</a>
+        <ul class="second">
+            <li><a href="#">Basic Python</a></li>
+            <li><a href="#">Advanced Python</a></li>
+            <li><a href="#">Programs</a></li>
+            <li><a href="#">Quiz</a></li>
+        </ul>
+    </li>
+    <li><a href="#contact">Django</a>
+      <ul class="second">
+          <li><a href="#">Basic Python</a></li>
+          <li><a href="#">Advanced Python</a></li>
+          <li><a href="#">Programs</a></li>
+          <li><a href="#">Quiz</a></li>
+      </ul>
+    </li>
+    <li><a href="#about">RestApi</a>
+      <ul class="second">
+          <li><a href="#">Basic Python</a></li>
+          <li><a href="#">Advanced Python</a></li>
+          <li><a href="#">Programs</a></li>
+          <li><a href="#">Quiz</a></li>
+      </ul>
+    </li>
+    <li><a class="" href="#home">HTML</a>
+      <ul class="second">
+          <li><a href="#">Basic Python</a></li>
+          <li><a href="#">Advanced Python</a></li>
+          <li><a href="#">Programs</a></li>
+          <li><a href="#">Quiz</a></li>
+      </ul>
+    </li>
+    <li><a href="#news">CSS</a>
+      <ul class="second">
+          <li><a href="#">Basic Python</a></li>
+          <li><a href="#">Advanced Python</a></li>
+          <li><a href="#">Programs</a></li>
+          <li><a href="#">Quiz</a></li>
+      </ul>
+    </li>
+    <li><a href="#contact">JS</a>
+      <ul class="second">
+          <li><a href="#">Basic Python</a></li>
+          <li><a href="#">Advanced Python</a></li>
+          <li><a href="#">Programs</a></li>
+          <li><a href="#">Quiz</a></li>
+      </ul>
+    </li>
+    <li><a href="#about">Bootstrap</a>
+      <ul class="second">
+          <li><a href="#">Basic Python</a></li>
+          <li><a href="#">Advanced Python</a></li>
+          <li><a href="#">Programs</a></li>
+          <li><a href="#">Quiz</a></li>
+      </ul>
+    </li>
+    <li><a class="" href="#home">Mysql</a>
+      <ul class="second">
+          <li><a href="#">Basic Python</a></li>
+          <li><a href="#">Advanced Python</a></li>
+          <li><a href="#">Programs</a></li>
+          <li><a href="#">Quiz</a></li>
+      </ul>
+    </li>
+    <li><a href="/localhost/mongodb">Mongodb</a>
+      <ul class="second">
+          <li><a href="#">Basic Python</a></li>
+          <li><a href="#">Advanced Python</a></li>
+          <li><a href="#">Programs</a></li>
+          <li><a href="#">Quiz</a></li>
+      </ul>
+    </li>
+    <li><a href="/localhost/login">Login</a></li>
+    <li><a href="/localhost/signup">Signup</a></li>
+    <li><a href="/localhost/logout">Logout</a></li>
+</ul>
+
+
+</table>
+</div>
+<body>

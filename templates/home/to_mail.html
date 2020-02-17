@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form class="" action="" method="post">
+  {% csrf_token %}
+  Enter Your Email Id<input type="email" name="e"><br>
+  <input type="submit" value="Next">
+</form>
+
+{% endblock %}
